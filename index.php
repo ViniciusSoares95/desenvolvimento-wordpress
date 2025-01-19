@@ -13,15 +13,15 @@ width="<?php echo get_custom_header()->width; ?>" alt="imagens de código de pro
                         while (have_posts()) : the_post();
                     ?>
                             <article>
-                                <h2><?php the_title(); ?></h2>
-                                <?php the_post_thumbnail( array(275, 275)); ?>
+                                <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( array(275, 275)); ?></a>
                                 <div class="meta-info">
                                     <p>Postado em <?php echo get_the_date(); ?> autor
                                         <?php the_author_posts_link(); ?></p>
                                     <p>Categorias: <?php the_category(' '); ?></p>
                                     <p>Tags: <?php the_tags('', ', '); ?></p>
                                 </div>
-                                <?php the_content(); ?>
+                                <?php the_excerpt(); ?>
                             </article>
                         <?php
                         endwhile;    # code...
