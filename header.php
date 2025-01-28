@@ -8,6 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div id="page" class="site">
         <header>
             <section class="top-bar">
@@ -26,7 +27,7 @@
                         ?>
                     </div>
                     <div class="searchbox">
-                        Search
+                        <?php get_search_form(); ?>
                     </div>
                 </div>
 

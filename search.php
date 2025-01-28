@@ -9,7 +9,7 @@
                     ?>
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <header>
-                            <h1><?php the_title(); ?></h1>
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <div class="meta-info">
                                 <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
                                 <?php if (has_category()): ?>
@@ -21,13 +21,10 @@
                             </div>
                         </header>
                         <div class="content">
-                            <?php the_content() ?>
+                            <?php the_excerpt(); ?>
                         </div>
                     </article>
                     <?php
-                    if(comments_open() || get_comments_number()){
-                        comments_template();
-                    }
                 endwhile;    
             ?>
         </div>

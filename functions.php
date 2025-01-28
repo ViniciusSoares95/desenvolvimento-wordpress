@@ -35,6 +35,13 @@ function wpdevs_config(){
         'flex-height' => true,
         'flex-width' => true
     ));
+
+    add_theme_support('automatic-feed-links');
+    add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 
+    'caption', 'style', 'script' ) );
+
+    add_theme_support('title-tag');
+    
 }
 
 add_action('after_setup_theme', 'wpdevs_config', 0);
@@ -85,6 +92,13 @@ function wpdevs_sidebars(){
             'after_title'   => '</h4>'
         )
     );
+}
+
+// Se a função body_open não existir no tema ele ira criar
+if(!function_exists('wp_body_open')) {
+    function wp_body_open() {
+        do_action('wp_body_open');
+    }
 }
 
 add_action('widgets_init', 'wpdevs_sidebars');
