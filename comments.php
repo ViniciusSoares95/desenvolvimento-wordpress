@@ -10,7 +10,7 @@ if ( post_password_required() ) {
         <h2 class="comments-title">
             <?php
                 $comment_count = get_comments_number();
-                echo $comment_count . ' Comments';
+                echo esc_html($comment_count) . ' Comments';
             ?>
         </h2>
 

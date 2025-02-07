@@ -20,7 +20,7 @@
                         }
                         else {
                             ?>
-                            <a href="<?php echo home_url('/') ?>"><span></span> <?php bloginfo('name'); ?></a>
+                            <a href="<?php echo esc_url(home_url('/'));?>"><span></span> <?php bloginfo('name'); ?></a>
                             <?php
                         }
 

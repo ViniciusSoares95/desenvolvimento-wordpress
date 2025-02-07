@@ -1,5 +1,5 @@
-<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>"
-    width="<?php echo get_custom_header()->width; ?>" alt="imagens de código de programação">
+<img src="<?php header_image(); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>"
+    width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="imagens de código de programação">
 
 <div id="content" class="site-content">
     <div id="content" class="site-contente">

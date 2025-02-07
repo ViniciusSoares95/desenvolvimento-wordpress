@@ -1,9 +1,11 @@
 <?php
 
+require get_template_directory() . '/inc/customizer.php';
+
 function wpdevs_load_scripts() {
     wp_enqueue_style('wpdevs-style', get_stylesheet_uri(), array(), 'all');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap',
-                      array(), null);
+                      array(), null);              
     wp_enqueue_script('dropdown', get_template_directory_uri() . '/js/dropdown.js', array(), '1.0', true);                  
 }
 add_action( 'wp_enqueue_scripts', 'wpdevs_load_scripts');
@@ -102,4 +104,10 @@ if(!function_exists('wp_body_open')) {
 }
 
 add_action('widgets_init', 'wpdevs_sidebars');
+
+
+
+
+
+
     

@@ -19,7 +19,7 @@ width="<?php echo get_custom_header()->width; ?>" alt="imagens de código de pro
                                     <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( array(275, 275)); ?></a>
                                 <?php endif; ?>
                                 <div class="meta-info">
-                                    <p>Postado em <?php echo get_the_date(); ?> autor
+                                    <p>Postado em <?php echo esc_html(get_the_date()); ?> autor
                                         <?php if (has_category()): ?>
                                             <p>Categorias: <?php the_category(' '); ?></p>
                                         <?php endif; ?>
